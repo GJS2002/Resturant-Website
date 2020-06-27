@@ -9,22 +9,23 @@ let alert = document.querySelector(".alert");
 
 
 //Event listeners
+
+//Checks for values in all forms and if there is no value it then displays the alert by removing the hide class
 btnSubmit.addEventListener('click', e => {
-    let z = [];
-    let check = inputs.forEach(input => {
-        console.log(input.value);
+    let inputArray = [];
+    inputs.forEach(input => {
         if(input.value === ''){
             z.push(input);
         }
        
     });
-    if(z.length > 0){
+    if(inputArray.length > 0){
         e.preventDefault();
         alert.classList.remove("hide");
     }
 });
 
-
+//Adds click events to tab buttons that display contact information
 tabBtns.forEach(btn => {
     btn.addEventListener('click', e => {
         let btn = e.currentTarget;
