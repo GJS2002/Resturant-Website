@@ -1,4 +1,4 @@
-//Database
+//Mini Database of menu items
 let menuItems = [
     {
         'name': 'item1',
@@ -86,6 +86,7 @@ window.addEventListener('load', displayItems);
 window.addEventListener('load', showLocalStorage);
 window.addEventListener('mousemove', setSize);
 
+//Sets inner html of cart to blank string simulating cart being cleared as well as clearing local storage
 clearCart.addEventListener('click', e => {
     cartList.innerHTML = '';
     document.querySelector(".total").textContent = '0';
@@ -96,16 +97,17 @@ clearCart.addEventListener('click', e => {
     clearLocalStorage();
 });
 
+//Closes cart menu
 cartCloseBtn.addEventListener('click', _ => {
     cart.style.height = '0%';
 });
-
+//Opens cart menu by giving it height
 openCart.addEventListener('click', _ => {
     cart.style.height = '100%';
     
 });
 
-
+//Sets size of image cover based on size of image
 function setSize(){
     let images = document.querySelectorAll(".menu-img");
 
@@ -117,6 +119,7 @@ function setSize(){
     });
 }
 
+//Displays all menu items in database dynamically
 function displayItems(){
     menuItems.forEach(item => {
         let name = item.name;
@@ -161,12 +164,7 @@ function displayItems(){
             });
         });
     }
-       
-        //On click hide all other image btn divs
-
-        
-        
-
+    //Adds functionallity to all buttons for the menu items 
     addItemBtn.forEach(btn => {
         btn.addEventListener('click', e => {
             let btn = e.currentTarget;
@@ -211,7 +209,7 @@ function displayItems(){
 function wait(ms){
     return new Promise(resolve => setTimeout(resolve, ms));
 }
-
+//Displays alert for 2 seconds before hiding it again
 async function displayAlert(string){
     alert.classList.remove("hide");
     alert.textContent = string;
@@ -219,6 +217,7 @@ async function displayAlert(string){
     alert.classList.add("hide");
 }
 
+//Displays item to cart menu dynamically as well as adding its data to local storage
 function addToCart(name, price, stock, amount){
     let theCode = `<li class="cart-item" data-id="${name}" data-stock="${stock}">
     <div class="item-info">
@@ -245,7 +244,7 @@ function addToCart(name, price, stock, amount){
     
 </li>`;
     let listItems = cartList.childNodes;
-    
+    //If cart is empty add item normally
     if(listItems.length === 0){
         cartList.innerHTML += theCode;
         displayAlert('Item Added To Cart!');
@@ -255,11 +254,13 @@ function addToCart(name, price, stock, amount){
     }
     else { 
        let selectedItem; 
+       //loops through cart items to check if same item is added and returns it
        listItems.forEach(item => {
             if(item.dataset.id === name){
                 selectedItem = item;
             }
         });    
+        //If no item in the cart was found matching the current item than add the item as a new cart item
         if(selectedItem === undefined){
             cartList.innerHTML += theCode;
             displayAlert('Item Added To Cart!');
@@ -267,6 +268,7 @@ function addToCart(name, price, stock, amount){
             addEvents();
             let amount = cartList.childNodes[0].childNodes[3].childNodes[3].textContent;
             addToLocalStorage(name, amount, price, stock);
+            //If an item was found matching the current item then increase the amount of the item already in the cart
         } else {
             let amount = selectedItem.childNodes[3].childNodes[3];        
             let value = parseFloat(amount.textContent);
@@ -283,7 +285,7 @@ function addToCart(name, price, stock, amount){
             
         }
     }  
-
+    //Adds functionality to all buttons on the cart items only if theres one item to prevent more than one event being added causeing bugs
     if(cartList.childNodes.length === 1 && !eventsAdded){
         addEvents();
         eventsAdded = true;
@@ -293,10 +295,13 @@ function addToCart(name, price, stock, amount){
     
 }
 
+
+//Adds functionality to all cart item buttons
 function addEvents(){
     let increaseBtns = document.querySelectorAll(".increase");
     let decreaseBtns = document.querySelectorAll(".decrease");
     let removeBtns = document.querySelectorAll(".btn-remove");
+        //Increases item amount and total price
         increaseBtns.forEach(btn => {
             btn.addEventListener('click', e => {
                 let button = e.currentTarget;
@@ -318,6 +323,7 @@ function addEvents(){
                 
             });
         });
+        //Decreases item amount and total price
         decreaseBtns.forEach(btn => {
             btn.addEventListener('click', e => {
                     let button = e.currentTarget;
@@ -340,6 +346,7 @@ function addEvents(){
                 });
                 
             });
+    //Removes item from cart completley and updates total price
     removeBtns.forEach(btn => {
         btn.addEventListener('click', e => {
             let cartTotal = document.querySelector(".total");
@@ -364,13 +371,13 @@ function addEvents(){
         })
     });
 }
-
+//Increases total price
 function increasePrice(price){
     let currentPrice = parseFloat(total.textContent);
     let newPrice = currentPrice + parseFloat(price);
     total.textContent = newPrice;
 }
-
+//Decreases total price
 function decreasePrice(price){
     let currentPrice = parseFloat(total.textContent);
     let newPrice = currentPrice - parseFloat(price)
@@ -382,7 +389,7 @@ function decreasePrice(price){
     
 }
 
-
+//Removes specified item from local storage
 function removeFromLocalStorage(name){
     let theCart = getLocalStorage('cart');
     let items = theCart.filter(item => {
@@ -392,7 +399,7 @@ function removeFromLocalStorage(name){
     });
     localStorage.setItem('cart', JSON.stringify(items));
 }
-
+//Edits the amount value of specified menu item object in local storage
 function editAmountInStorage(itemName, value){
     let theCart = getLocalStorage('cart');
     let items = theCart.filter(item => {
@@ -404,26 +411,26 @@ function editAmountInStorage(itemName, value){
     });
     localStorage.setItem('cart', JSON.stringify(items));
 }
-
+//Adds menu item to local storage
 function addToLocalStorage(name, amount, price, stock){
     let cartItem = {name, amount, price, stock};
     let theCart = getLocalStorage('cart');
     theCart.push(cartItem);
     localStorage.setItem('cart', JSON.stringify(theCart));
 }
-
+//Gets item from local storage
 function getLocalStorage(item){
     let s = localStorage.getItem(item)?JSON.parse(localStorage.getItem(item)) : [];
     return s;
 }
-
+//Clears local storage
 function clearLocalStorage(){
     let theCart = getLocalStorage('cart');
     console.log(theCart);
     theCart.length = 0;
     localStorage.setItem('cart', theCart);
 }
-
+//Displays all items from local storage onto the cart menu 
 function showLocalStorage(){
     let theCart = getLocalStorage('cart');
     theCart.forEach(item => {
