@@ -35,12 +35,12 @@ let dateText = document.querySelector(".date");
 
 dateText.textContent = new Date().getFullYear();
 
-
+//Re-sizes image offset to border when page is re-sized 
 window.addEventListener('resize', e => {
     let offSet = donutImg.clientHeight / -2;
     document.documentElement.style.setProperty('--imgOffset', `${offSet}px`);
 })
-
+//Adds events for each employee button and adds/removes the .active class
 employeeBtns.forEach(btn => {
     btn.addEventListener('click', e => {
         employeeBtns.forEach(btn => btn.classList.remove("active"));
@@ -51,6 +51,8 @@ employeeBtns.forEach(btn => {
     });
 });
 
+
+//Displays information dynamically based on the id and finds the id within the mini employee array
 function displayInfo(id){
     let selection = employeeDB.filter(person => {
         if(person.id == id){
