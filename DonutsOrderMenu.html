@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./Static/css/nav.css">
+		<link rel="stylesheet" href="./Static/css/DonutsOrderMenu.css" />
+		
+		<script
+			src="https://kit.fontawesome.com/b9865150d6.js"
+			crossorigin="anonymous"
+		></script>
+		<title>Donut MANIA Menu</title>
+	</head>
+	<body>
+		<p class="alert hide">Item added to cart!</p>
+		<!-- NavBar HTML -->
+		<button class="btn btn-cart">
+			<i class="fas fa-shopping-cart rainbow"></i>
+		</button>
+		<button class="btn btn-hamburger">
+			<i class="fas fa-cookie rainbow"></i>
+		</button>
+		<nav>
+			<div class="nav-header">
+				<h1 class="nav-title">Donut-<span class="rainbow">MANIA</span></h1>
+				<button class="btn close-nav">
+					<i class="fas fa-times"></i>
+				</button>
+			</div>
+			<div class="nav-selection">
+				<ul class="nav-list">
+					<li class="nav-item">
+						<a href="./DonutsHome.html" class="btn nav-btn">Home</a>
+					</li>
+					<li class="nav-item">
+						<a href="./DonutsOrderMenu.html" class="btn nav-btn">Order/Menu</a>
+					</li>
+					<li class="nav-item">
+						<a href="./DonutsContact.html" class="btn nav-btn">Contact Us</a>
+					</li>
+					<li class="nav-item">
+						<a href="./DonutsAbout.html" class="btn nav-btn">About us</a>
+					</li>
+					<li class="nav-item">
+						<a
+							class="nav-link"
+							href="https://www.facebook.com/"
+							target="_blank"
+						>
+							<i class="fab fa-facebook"></i>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a
+							class="nav-link"
+							href="https://www.instagram.com/"
+							target="_blank"
+						>
+							<i class="fab fa-instagram"></i>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a
+							class="nav-link"
+							href="https://twitter.com/explore"
+							target="_blank"
+						>
+							<i class="fab fa-twitter"></i>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<div class="cover hide"></div>
+		<div class="modal hide">
+			<!-- <div class="img-modal">
+				<img src="./Static/images/item9.jpg" alt="">
+			</div>
+			<button class="btn close-modal">
+				<i class="fas fa-times"></i>
+			</button>
+			<p class="price">$20.00, 2 in stock</p>
+			<p class="desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet perspiciatis voluptates nam! Fugit amet perspiciatis dolor animi mollitia adipisci, expedita qui asperiores voluptates, quidem obcaecati quam quas ratione debitis blanditiis.</p> -->
+		</div>
+	<main>
+		<div class="banner">
+			<h1 class="title">
+				Our Donuts
+			</h1>
+			<p class="tip">(tap on images)</p>
+			
+		</div>
+
+		<div class="cart">
+			<header>
+				<h1>Your cart</h1>
+				<button class="btn close-cart">
+					<i class="fas fa-times"></i>
+				</button>
+			</header>
+			<div class="checkout">
+				<ul class="checkout-items"></ul>
+			</div>
+			
+			<h4>Total: <div>$<span class="total">0</span>.00</div></h4>
+			<button class="btn clear-cart">Clear Cart</button>
+		</div>
+
+		<div class="menu">
+			<!-- <div class="item1">
+				<div class="img">
+					<div class="img-cover">
+						<button class="btn btn-addToCart">
+							<i class="fas fa-shopping-cart"></i>
+						</button>					
+					</div>
+					<img src="./Static/images/item1.jpg" alt="">
+				</div>
+			</div> -->
+		</div>
+	</main>
+		
+	</body>
+	<script src="./Static/js/DonutsOrderMenu.js"></script>
+	<script src="./Static/js/nav.js"></script>
+</html>
