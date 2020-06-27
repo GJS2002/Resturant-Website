@@ -10,6 +10,7 @@
 
 //Document elements
 let dateText = document.querySelector(".date");
+//Dynamicaly updates date every year
 dateText.textContent = new Date().getFullYear();
 
 
