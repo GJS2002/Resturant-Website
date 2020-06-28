@@ -5,6 +5,6 @@ Basic responsive home page with nav bar
 # Menu page
 Responsive custom grid layout menu page with a functioning cart system that stores data locally in the browser
 # Contact page
-Basic responsive contact page with form
+Responsive contact page with a form
 # About page
-Basic responsive About page with buttons that display certain employees information
+Responsive page with certain information displayed when a specific button is pressed
