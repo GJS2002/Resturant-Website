@@ -108,6 +108,7 @@ nav,
 .btn-hamburger, .btn-cart {
   position: fixed;
   z-index: 30;
+  font-size: 2em;
 }
 
 .btn-hamburger:hover, .btn-cart:hover {
@@ -156,7 +157,9 @@ nav {
           animation: Breathe 2s infinite;
 }
 
-
+.close-nav, .btn-cart, .btn-hamburger, .close-modal, .close-cart {
+  font-size: 2em;
+}
 
 .close-nav {
   font-size: 1rem;
@@ -277,9 +280,5 @@ nav {
   75% {
     color: #ffa600;
   }
-}
-.close-nav, .btn-cart, .btn-hamburger, .close-modal, .close-cart {
-  font-size: 2em;
-  width: 2rem;
 }
 /*# sourceMappingURL=nav.css.map */

@@ -100,6 +100,7 @@ nav,
 .btn-hamburger, .btn-cart {
 	position: fixed;
 	z-index: 30;
+	font-size: 2em;
 }
 
 .btn-hamburger:hover, .btn-cart:hover{
@@ -141,7 +142,7 @@ nav {
 
 .close-nav, .btn-cart, .btn-hamburger, .close-modal, .close-cart{
      font-size: 2em;
-	width: 2rem;
+	
 }
 
 .close-nav {
