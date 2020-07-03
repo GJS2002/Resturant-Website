@@ -88,6 +88,7 @@ Navbar
 */
 .btn-cart{
 	top: 2rem;
+	font-size: 2em;
 	right: 6rem;
 	animation: Breathe 2s infinite;
 }
@@ -452,7 +453,7 @@ Animations and media quereys
 
 	.btn-hamburger, .btn-cart{
 		z-index: 10;
-		font-size: 1em;
+		font-size: 2em;
 	}
 
 	.btn-hamburger{

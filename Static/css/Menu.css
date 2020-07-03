@@ -90,6 +90,7 @@ Navbar
 */
 .btn-cart {
   top: 2rem;
+  font-size: 2em;
   right: 6rem;
   -webkit-animation: Breathe 2s infinite;
           animation: Breathe 2s infinite;
@@ -497,7 +498,7 @@ Animations and media quereys
         align-self: center;
   }
   .btn-remove {
-    font-size: .8rem;
+    font-size: 1rem;
   }
   .clear-cart {
     width: 50vw;
@@ -537,6 +538,7 @@ Animations and media quereys
   }
   .btn-hamburger, .btn-cart {
     z-index: 10;
+    font-size: 2em;
   }
   .btn-hamburger {
     top: 1rem;
@@ -582,7 +584,7 @@ Animations and media quereys
     padding: .5rem;
   }
   .modal, .btn {
-    font-size: 2rem;
+    font-size: 2em;
   }
   .banner {
     height: 40vh;
