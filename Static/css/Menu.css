@@ -136,7 +136,10 @@ Banner/Menu
   height: 100%;
   display: -ms-grid;
   display: grid;
-  grid-template: 'item1 item2 item4 item5' 'item1 item3 item3 item5' 'item6 item3 item3 item7' 'item6 item8 item9 item7';
+  grid-template: 'item1 item2 item4 item5'
+ 'item1 item3 item3 item5'
+ 'item6 item3 item3 item7'
+ 'item6 item8 item9 item7';
   grid-gap: 1rem;
   margin-bottom: 3rem;
 }
@@ -417,9 +420,9 @@ h4 {
 .checkout-items {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(100px, 1fr))[4];
+  -ms-grid-columns: minmax(100px, 1fr) minmax(100px, 1fr) minmax(100px, 1fr) minmax(100px, 1fr);
       grid-template-columns: repeat(4, minmax(100px, 1fr));
-  -ms-grid-rows: (minmax(50px, 90px))[4];
+  -ms-grid-rows: minmax(50px, 90px) minmax(50px, 90px) minmax(50px, 90px) minmax(50px, 90px);
       grid-template-rows: repeat(4, minmax(50px, 90px));
 }
 
@@ -443,9 +446,9 @@ Animations and media quereys
 */
 @media screen and (max-width: 320px) {
   .checkout-items {
-    -ms-grid-columns: (1fr)[2];
+    -ms-grid-columns: 1fr 1fr;
         grid-template-columns: repeat(2, 1fr);
-    -ms-grid-rows: (85px)[5];
+    -ms-grid-rows: 85px 85px 85px 85px 85px;
         grid-template-rows: repeat(5, 85px);
   }
   .info {
@@ -508,7 +511,13 @@ Animations and media quereys
     right: 4rem;
   }
   .menu {
-    grid-template: 'item2 item4' 'item3 item3' 'item3 item3' 'item8 item9' 'item5 item7' 'item6 item1' 'item6 item1';
+    grid-template: 'item2 item4'
+ 'item3 item3'
+ 'item3 item3'
+ 'item8 item9'
+ 'item5 item7'
+ 'item6 item1'
+ 'item6 item1';
   }
   .modal {
     font-size: 1rem;
@@ -602,9 +611,9 @@ Animations and media quereys
     height: 80%;
   }
   .checkout-items {
-    -ms-grid-columns: (1fr)[3];
+    -ms-grid-columns: 1fr 1fr 1fr;
         grid-template-columns: repeat(3, 1fr);
-    -ms-grid-rows: (70px)[3];
+    -ms-grid-rows: 70px 70px 70px;
         grid-template-rows: repeat(3, 70px);
   }
   #amount {
@@ -646,7 +655,7 @@ Animations and media quereys
     -ms-grid-rows: max-content;
         grid-template-rows: -webkit-max-content;
         grid-template-rows: max-content;
-    -ms-grid-columns: (1fr)[3];
+    -ms-grid-columns: 1fr 1fr 1fr;
         grid-template-columns: repeat(3, 1fr);
   }
   .alert {

@@ -206,7 +206,7 @@ header h1 {
   height: 30%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[4];
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
       grid-template-columns: repeat(4, 1fr);
   -ms-grid-rows: 1fr;
       grid-template-rows: 1fr;
@@ -365,7 +365,7 @@ Animations and media quereys
   .employee__btns {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-    -ms-grid-rows: (1fr)[4];
+    -ms-grid-rows: 1fr 1fr 1fr 1fr;
         grid-template-rows: repeat(4, 1fr);
   }
   .story {
@@ -414,7 +414,7 @@ Animations and media quereys
   .employee__btns {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-    -ms-grid-rows: (1fr)[4];
+    -ms-grid-rows: 1fr 1fr 1fr 1fr;
         grid-template-rows: repeat(4, 1fr);
   }
   .story {
@@ -436,7 +436,7 @@ Animations and media quereys
 
 @media screen and (min-width: 700px) {
   .employee__btns {
-    -ms-grid-columns: (1fr)[4];
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
         grid-template-columns: repeat(4, 1fr);
     -ms-grid-rows: 1fr;
         grid-template-rows: 1fr;
