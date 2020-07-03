@@ -234,24 +234,6 @@ nav {
   }
 }
 
-@-webkit-keyframes Breathe {
-  0%, 100% {
-    font-size: 2rem;
-  }
-  50% {
-    font-size: 1.5rem;
-  }
-}
-
-@keyframes Breathe {
-  0%, 100% {
-    font-size: 2rem;
-  }
-  50% {
-    font-size: 1.5rem;
-  }
-}
-
 @-webkit-keyframes Rainbow {
   0%, 100% {
     color: deepskyblue;
