@@ -91,7 +91,7 @@ main{
         to top left,
         rgba(0, 0, 0, 0.7),
         rgba(0, 0, 0, 0.8)
-      ), url(/Static/images/banner5.jpg) center/cover no-repeat fixed;
+      ), url("https://gjs2002.github.io/Resturant-Website/Static/images/banner5.jpg") center/cover no-repeat fixed;
 }
 
 main{
