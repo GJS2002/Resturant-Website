@@ -15,7 +15,7 @@ btnSubmit.addEventListener('click', e => {
     let inputArray = [];
     inputs.forEach(input => {
         if(input.value === ''){
-            z.push(input);
+            inputArray.push(input);
         }
        
     });
