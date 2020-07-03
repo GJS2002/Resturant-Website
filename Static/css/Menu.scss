@@ -406,7 +406,7 @@ Animations and media quereys
 	}
 
 	.btn-remove{
-		font-size: .8rem;
+		font-size: 1rem;
 	}
 
 	.clear-cart{
@@ -452,6 +452,7 @@ Animations and media quereys
 
 	.btn-hamburger, .btn-cart{
 		z-index: 10;
+		font-size: 1em;
 	}
 
 	.btn-hamburger{
@@ -506,7 +507,7 @@ Animations and media quereys
 	}
 
 	.modal, .btn{
-		font-size: 1.3rem;
+		font-size: 2em;
 	}
 
 	.banner{
@@ -583,7 +584,7 @@ Animations and media quereys
 
 @media screen and (min-width: 1000px){
 	.btn{
-		font-size: 2rem;
+		font-size: 2em;
 	}
 	.img-modal{
 		height: 80%;
