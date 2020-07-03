@@ -67,7 +67,7 @@ Variables
 }
 
 main {
-	height: auto;
+	height: max-content;
 	background: linear-gradient(
 		to top right,
 		rgba(0, 0, 0, 0.3),
@@ -126,7 +126,7 @@ Banner/Menu
 	width: 90%;
 	height: 100%;
 	display: grid;
-	grid-template: 
+	grid-template-areas: 
 	'item1 item2 item4 item5'
 	'item1 item3 item3 item5'
 	'item6 item3 item3 item7'
