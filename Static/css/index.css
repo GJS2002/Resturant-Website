@@ -1,0 +1,364 @@
+/*
+=============== 
+Fonts
+===============
+*/
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+/*
+=============== 
+Variables
+===============
+*/
+:root {
+  /* dark shades of primary color*/
+  --clr-primary-1: hsl(205, 86%, 17%);
+  --clr-primary-2: hsl(205, 77%, 27%);
+  --clr-primary-3: hsl(205, 72%, 37%);
+  --clr-primary-4: hsl(205, 63%, 48%);
+  /* primary/main color */
+  --clr-primary-5: #49a6e9;
+  /* lighter shades of primary color */
+  --clr-primary-6: hsl(205, 89%, 70%);
+  --clr-primary-7: hsl(205, 90%, 76%);
+  --clr-primary-8: hsl(205, 86%, 81%);
+  --clr-primary-9: hsl(205, 90%, 88%);
+  --clr-primary-10: hsl(205, 100%, 96%);
+  /* darkest grey - used for headings */
+  --clr-grey-1: hsl(209, 61%, 16%);
+  --clr-grey-2: hsl(211, 39%, 23%);
+  --clr-grey-3: hsl(209, 34%, 30%);
+  --clr-grey-4: hsl(209, 28%, 39%);
+  /* grey used for paragraphs */
+  --clr-grey-5: hsl(210, 22%, 49%);
+  --clr-grey-6: hsl(209, 23%, 60%);
+  --clr-grey-7: hsl(211, 27%, 70%);
+  --clr-grey-8: hsl(210, 31%, 80%);
+  --clr-grey-9: hsl(212, 33%, 89%);
+  --clr-grey-10: hsl(210, 36%, 96%);
+  --clr-white: #fff;
+  --clr-red-dark: hsl(360, 67%, 44%);
+  --clr-red-light: hsl(360, 71%, 66%);
+  --clr-green-dark: hsl(125, 67%, 44%);
+  --clr-green-light: hsl(125, 71%, 66%);
+  --clr-black: #222;
+  --ff-primary: "Roboto", sans-serif;
+  --ff-secondary: "Open Sans", sans-serif;
+  --transition: all 0.3s linear;
+  --transition2: all .5s linear;
+  --spacing: 0.25rem;
+  --radius: 0.5rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  --max-width: 40vw;
+  --fixed-width: 620px;
+  --SlideLength: 0%;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: var(--ff-secondary);
+  list-style: none;
+  text-decoration: none;
+}
+
+.banner-container, .banner-info, .text1, .container, .text2, .container2, .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/*
+=============== 
+Main Website Layout
+===============
+*/
+main {
+  position: relative;
+  -webkit-transition: var(--transition2);
+  transition: var(--transition2);
+}
+
+main {
+  width: 100%;
+}
+
+/*
+=============== 
+Banner
+===============
+*/
+article {
+  background: rgba(0, 0, 0, 0.9);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+}
+
+.banner-container {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 60vh;
+  width: 100%;
+  background: bottom/cover no-repeat url("https://gjs2002.github.io/Resturant-Website/Static/images/banner.jpg");
+}
+
+.shop {
+  font-size: 1.5rem;
+  background: rgba(0, 0, 0, 0.541);
+  padding: 5px;
+  margin: 1rem;
+  border: 2px solid white;
+  color: white;
+  text-align: center;
+}
+
+.shop:hover {
+  background: white;
+  color: black;
+}
+
+.slogan {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.slogan, .banner-title {
+  color: white;
+  text-shadow: -3px 1px 0px black;
+}
+
+.banner-info {
+  height: 20%;
+  width: 70%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.banner-title {
+  font-size: 1.7rem;
+  border-bottom: 2px solid white;
+}
+
+.hide {
+  display: none;
+}
+
+/*
+=============== 
+Extra stuff
+===============
+*/
+.container, .container2 {
+  margin: 1rem;
+  font-size: .9rem;
+  width: 40%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  font-style: italic;
+}
+
+.img2 {
+  margin: 5rem;
+  width: 40%;
+}
+
+.text1 {
+  margin: 1rem;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  color: white;
+}
+
+.img-1 {
+  margin: 1rem;
+  width: 30%;
+}
+
+.desc {
+  text-align: center;
+  width: 100%;
+}
+
+.text1 span, .text2 span {
+  color: orange;
+}
+
+.text2 {
+  margin: 1rem;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  color: white;
+}
+
+.text2 footer, .text2 header, .img2 {
+  margin: 1rem;
+}
+
+.info {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: white;
+  text-align: center;
+  padding: 3rem;
+}
+
+.link {
+  border: 2px solid white;
+  color: white;
+  padding: 5px;
+  margin: 1rem;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  -webkit-transition: var(--transition2);
+  transition: var(--transition2);
+}
+
+.link:hover {
+  cursor: pointer;
+  background: black;
+  color: white;
+  font-size: 1.25rem;
+}
+
+/*
+=============== 
+Animations And Meida Quereys
+===============
+*/
+@media screen and (max-width: 600px) {
+  .banner-info {
+    height: 25%;
+  }
+  .container, .container2 {
+    width: 100%;
+    font-size: .7rem;
+  }
+  .text1 p, .text2 p {
+    margin-top: 1rem;
+    width: 100%;
+  }
+  .text1, .text2 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .text2 footer {
+    margin: 0px;
+  }
+  .img-1, .img2 {
+    width: 40%;
+  }
+  .slogan {
+    font-size: 1rem;
+  }
+  .banner-title {
+    font-size: 1.2rem;
+  }
+  .shop {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .slogan {
+    font-size: 1.5rem;
+  }
+  .banner-title {
+    font-size: 2rem;
+  }
+  .img-1 {
+    width: 20%;
+  }
+  .container, .container2 {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-height: 650px) {
+  .banner-container {
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    padding: 3rem;
+  }
+  .shop {
+    font-size: 1rem;
+  }
+}
+
+@-webkit-keyframes Breathe {
+  0%, 100% {
+    font-size: 2rem;
+  }
+  50% {
+    font-size: 1.5rem;
+  }
+}
+
+@keyframes Breathe {
+  0%, 100% {
+    font-size: 2rem;
+  }
+  50% {
+    font-size: 1.5rem;
+  }
+}
+
+@-webkit-keyframes Rainbow {
+  0%, 100% {
+    color: deepskyblue;
+  }
+  25% {
+    color: #00fc00;
+  }
+  50% {
+    color: magenta;
+  }
+  75% {
+    color: #ffa600;
+  }
+}
+
+@keyframes Rainbow {
+  0%, 100% {
+    color: deepskyblue;
+  }
+  25% {
+    color: #00fc00;
+  }
+  50% {
+    color: magenta;
+  }
+  75% {
+    color: #ffa600;
+  }
+}
+/*# sourceMappingURL=index.css.map */
