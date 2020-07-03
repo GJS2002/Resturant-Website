@@ -105,7 +105,7 @@ article{
     flex-direction: column;
     height: 60vh;
     width: 100%;
-    background: bottom / cover no-repeat url("/Static/images/banner.jpg");
+    background: bottom / cover no-repeat url("Resturant-Website/Static/images/banner.jpg");
 }
 
 .shop{
