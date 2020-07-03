@@ -67,7 +67,7 @@ Variables
 }
 
 main {
-	height: max-content;
+	height: 120vh;
 	background: linear-gradient(
 		to top right,
 		rgba(0, 0, 0, 0.3),
@@ -101,7 +101,7 @@ Main Website Layout
 main{
 	display: flex;
 	flex-direction: column;
-	height: max-content;
+	height: 120vh;
 }
 
 

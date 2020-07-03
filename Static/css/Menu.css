@@ -66,9 +66,7 @@ Variables
 }
 
 main {
-  height: -webkit-max-content;
-  height: -moz-max-content;
-  height: max-content;
+  height: 120vh;
   background: -webkit-gradient(linear, left bottom, right top, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.9))), url("https://gjs2002.github.io/Resturant-Website/Static/images/banner3.jpg") center/cover no-repeat fixed;
   background: linear-gradient(to top right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.9)), url("https://gjs2002.github.io/Resturant-Website/Static/images/banner3.jpg") center/cover no-repeat fixed;
 }
@@ -110,9 +108,7 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: -webkit-max-content;
-  height: -moz-max-content;
-  height: max-content;
+  height: 120vh;
 }
 
 /*
@@ -200,7 +196,7 @@ Banner/Menu
 }
 
 .item7 {
-  grid-row: 2/3;
+  grid-row: 3/2;
   grid-column: 4;
   -ms-grid-row: 3;
   -ms-grid-row-span: 2;
