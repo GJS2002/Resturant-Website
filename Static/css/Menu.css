@@ -136,7 +136,7 @@ Banner/Menu
   height: 100%;
   display: -ms-grid;
   display: grid;
-  grid-template: 'item1 item2 item4 item5'
+  grid-template-areas: 'item1 item2 item4 item5'
  'item1 item3 item3 item5'
  'item6 item3 item3 item7'
  'item6 item8 item9 item7';
