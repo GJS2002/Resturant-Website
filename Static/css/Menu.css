@@ -66,9 +66,9 @@ Variables
 }
 
 main {
-  height: 120vh;
-  background: -webkit-gradient(linear, left bottom, right top, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.9))), url("https://gjs2002.github.io/Resturant-Website/Static/images/banner3.jpg") center/cover no-repeat fixed;
-  background: linear-gradient(to top right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.9)), url("https://gjs2002.github.io/Resturant-Website/Static/images/banner3.jpg") center/cover no-repeat fixed;
+  height: auto;
+  background: -webkit-gradient(linear, left bottom, right top, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.9))), url("https://gjs2002.github.io/Resturant-Website/Static/images/banner3.jpg") center/cover no-repeat;
+  background: linear-gradient(to top right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.9)), url("https://gjs2002.github.io/Resturant-Website/Static/images/banner3.jpg") center/cover no-repeat;
 }
 
 .banner, .item-1, .item-2, .img-cover, .item-3, header, .cart-item, #amount {
@@ -108,7 +108,7 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 120vh;
+  height: auto;
 }
 
 /*
